@@ -1,0 +1,196 @@
+/** resets **/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background: #fafafa;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #888;
+    font-size: 62.5%;
+    line-height: 1;
+}
+
+::selection {
+    background: #a4dcec;
+}
+
+::-moz-selection {
+    background: #a4dcec;
+}
+
+::-webkit-selection {
+    background: #a4dcec;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #ccc;
+    font-style: italic;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #ccc;
+    font-style: italic;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #ccc;
+    font-style: italic;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #ccc !important;
+    font-style: italic;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+input, textarea {
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    width: 100%;
+
+    overflow: hidden;
+}
+
+.logo {
+
+    height: 52px;
+    padding: 8px;
+    float: left;
+    border-right: 2px solid #DDD;
+}
+
+#content {
+    width: 100%;
+    min-width: 1000px;
+    background: #fff;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    overflow: hidden;
+}
+
+#searchfield {
+    width: 60%;
+    height: 52px;
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+}
+
+#searchfield form {
+    background: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+#searchfield form .biginput {
+
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    border-radius: 1px;
+    color: #aeaeae;
+    font-weight: normal;
+    font-size: 1.5em;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+
+}
+
+#searchfield form .biginput:focus {
+    color: #858585;
+}
+
+.wrap1 {
+    float: right;
+    width: 30%;
+    font-family: 'Montserrat', sans-serif;
+    /*border-left: 2px solid #DDD;*/
+    list-style-type: none;
+    position: inherit;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+li a {
+    font-size: 16px;
+    color: #888;
+    float: left;
+    text-decoration: none;
+    padding: 18px;
+    display: inline;
+    margin-right: 5px;
+
+}
+
+/* Highlight text out  */
+div.container a {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+div.container a:before, div.container2 a:before, div.container3 a:before {
+    position: absolute;
+    color: #273CFF;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.3s;
+    transform: scale(1.2);
+    opacity: 0;
+}
+
+div.container a:hover:before, div.container2 a:hover:before, div.container3 a:hover:before {
+    text-decoration-line: none;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.autocomplete-suggestions {
+    border: 1px solid #888;
+    background: #fff;
+    cursor: default;
+    overflow: auto;
+}
+
+.autocomplete-suggestion {
+    padding: 10px 5px;
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.autocomplete-selected {
+    background: #aaa;
+}
+
+.autocomplete-suggestions strong {
+    font-weight: normal;
+    color: #273CFF;
+}

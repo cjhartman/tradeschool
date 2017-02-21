@@ -1,0 +1,94 @@
+/** resets **/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;  
+}
+
+
+html { height: 100%; }
+body { 
+  background: #fafafa; 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #888;
+  font-size: 62.5%; 
+  line-height: 1;
+}
+
+input, textarea { 
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none; 
+    width:100%;
+    
+    overflow: hidden;
+}
+
+#posting-container{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+    overflow:  hidden;
+    height: 100%;
+}
+
+#posting-info{
+    width:60%;
+    float:left;
+    background-color: #fff;
+    min-width: 350px;
+    box-shadow: 1px 1px 3px #bbb;
+    height: 600px;
+}
+
+#posthead{
+    font-size: 28px;
+    color: #555;
+    margin: 10px;
+}
+
+#post-img{
+    margin-left: 20px;
+    width: 35%; 
+    float: left; 
+    background-color: #fff;
+    min-width: 300px;
+    box-shadow: 1px 1px 3px #bbb;
+    height: 600px;
+}
+
+.post-desc{margin-left: 10px; font-size: 18px; color: #888;}
+
+#product-text-area{margin-left: 10px; resize: none; width: 80%; font-size: 14px; border: none; border-radius: 3px; border:solid 1px #eee;}
+
+#cond-post, #price-post, #title-post, #contact-post, #tag-post{margin-left: 10px; width: 300px; font-size: 14px; border: none; border-radius: 3px; border:solid 1px #eee;}
+
+
+@media only screen and (max-width: 1000px){
+
+    #posting-info{
+        width: 100%;
+        box-shadow: 1px 1px 3px #bbb;
+    }   
+    
+    #post-img{
+        width: 100%;
+        margin-left: auto;
+        margin-top: 5px;
+        box-shadow: 1px 1px 3px #bbb;
+    }
+}
