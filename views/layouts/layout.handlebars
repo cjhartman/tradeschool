@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US" ng-app="tdapp">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700,900|Roboto:100,300,400,500,700,900"
+          rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="/style.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="/css/dark.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/font-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/responsive.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
+    <link rel="stylesheet" type="text/css" href="/include/rs-plugin/css/settings.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/include/rs-plugin/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="/include/rs-plugin/css/navigation.css">
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Trade School</title>
+
+    <style>
+
+        .demos-filter {
+            margin: 0;
+            text-align: right;
+        }
+
+        .demos-filter li {
+            list-style: none;
+            margin: 10px 0px;
+        }
+
+        .demos-filter li a {
+            display: block;
+            border: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #444;
+        }
+
+        .demos-filter li a:hover,
+        .demos-filter li.activeFilter a {
+            color: #1ABC9C;
+        }
+
+        @media (max-width: 991px) {
+            .demos-filter {
+                text-align: center;
+            }
+
+            .demos-filter li {
+                float: left;
+                width: 33.3%;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .demos-filter li {
+                width: 50%;
+            }
+        }
+
+        .tp-video-play-button {
+            display: none !important;
+        }
+
+        .tp-caption {
+            white-space: nowrap;
+        }
+
+        .goods {
+            position: absolute;
+            min-width: 385px;
+            height: 89%;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: translate(0px, 0);
+        }
+
+        #product {
+            width: 27.796%;
+            border-top: 2px solid #ff5722;
+            box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.15);
+            background-color: rgba(255, 255, 255, 0.8);
+            float: left;
+        }
+
+        span.info {
+            position: relative;
+            display: block;
+            border-bottom: 1px solid #dadada;
+        }
+
+        .goods img {
+            width: 100%;
+        }
+
+        #product #sellerInfo {
+            width: 100%;
+            height: 48px;
+            font-family: 'Open Sans';
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #727272;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        #product #sellerInfo:hover {
+            color: #212121;
+            background-color: rgba(239, 239, 239, 0.23);
+        }
+
+        #product #sellerInfo:active {
+            color: #ff5722;
+        }
+
+        span.text {
+            position: absolute;
+            width: calc(100% - 48px);
+            height: calc(100% - 48px);
+            top: 0;
+            padding: 24px;
+            background-color: rgba(255, 255, 255, 0.9);
+            opacity: 0;
+        }
+
+        .description {
+            height: calc(100% - 100px);
+            padding-bottom: 20px !important;
+            font-size: 12px;
+            line-height: 17px;
+        }
+
+        .info p {
+            padding-bottom: 10px;
+            font-size: 12px;
+        }
+
+        #info:hover #text {
+            opacity: 1;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        span#price {
+            float: right;
+            font-weight: 600;
+            font-size: 14px;
+            color: #ff5a26;
+        }
+
+        @media screen and (max-width: 1320px) {
+            #product {
+                width: 44.6%;
+            }
+
+            .cart {
+                width: 24.5%;
+                min-width: 260px;
+            }
+
+            @media screen and (max-width: 1048px) {
+                .goods {
+                    width: 50%;
+                }
+
+                #product {
+                    width: 94.6%;
+                }
+
+                .cart {
+                    width: 24.5%;
+                    min-width: 260px;
+                }
+            }
+        }
+
+    </style>
+
+</head>
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700,900|Roboto:100,300,400,500,700,900"
+          rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="/style.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="/css/dark.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/font-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/responsive.css" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+    <!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
+    <link rel="stylesheet" type="text/css" href="/include/rs-plugin/css/settings.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="/include/rs-plugin/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="/include/rs-plugin/css/navigation.css">
+
+    <!-- Document Title
+    ============================================= -->
+    <title>Trade School</title>
+
+    <style>
+
+        .demos-filter {
+            margin: 0;
+            text-align: right;
+        }
+
+        .demos-filter li {
+            list-style: none;
+            margin: 10px 0px;
+        }
+
+        .demos-filter li a {
+            display: block;
+            border: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #444;
+        }
+
+        .demos-filter li a:hover,
+        .demos-filter li.activeFilter a {
+            color: #1ABC9C;
+        }
+
+        @media (max-width: 991px) {
+            .demos-filter {
+                text-align: center;
+            }
+
+            .demos-filter li {
+                float: left;
+                width: 33.3%;
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .demos-filter li {
+                width: 50%;
+            }
+        }
+
+        .tp-video-play-button {
+            display: none !important;
+        }
+
+        .tp-caption {
+            white-space: nowrap;
+        }
+
+        .goods {
+            position: absolute;
+            min-width: 385px;
+            height: 89%;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            transform: translate(0px, 0);
+        }
+
+        #product {
+            width: 27.796%;
+            border-top: 2px solid #ff5722;
+            box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.15);
+            background-color: rgba(255, 255, 255, 0.8);
+            float: left;
+        }
+
+        span.info {
+            position: relative;
+            display: block;
+            border-bottom: 1px solid #dadada;
+        }
+
+        .goods img {
+            width: 100%;
+        }
+
+        #product #sellerInfo {
+            width: 100%;
+            height: 48px;
+            font-family: 'Open Sans';
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #727272;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+        #product #sellerInfo:hover {
+            color: #212121;
+            background-color: rgba(239, 239, 239, 0.23);
+        }
+
+        #product #sellerInfo:active {
+            color: #ff5722;
+        }
+
+        span.text {
+            position: absolute;
+            width: calc(100% - 48px);
+            height: calc(100% - 48px);
+            top: 0;
+            padding: 24px;
+            background-color: rgba(255, 255, 255, 0.9);
+            opacity: 0;
+        }
+
+        .description {
+            height: calc(100% - 100px);
+            padding-bottom: 20px !important;
+            font-size: 12px;
+            line-height: 17px;
+        }
+
+        .info p {
+            padding-bottom: 10px;
+            font-size: 12px;
+        }
+
+        #info:hover #text {
+            opacity: 1;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        span#price {
+            float: right;
+            font-weight: 600;
+            font-size: 14px;
+            color: #ff5a26;
+        }
+
+        @media screen and (max-width: 1320px) {
+            #product {
+                width: 44.6%;
+            }
+
+            .cart {
+                width: 24.5%;
+                min-width: 260px;
+            }
+
+            @media screen and (max-width: 1048px) {
+                .goods {
+                    width: 50%;
+                }
+
+                #product {
+                    width: 94.6%;
+                }
+
+                .cart {
+                    width: 24.5%;
+                    min-width: 260px;
+                }
+            }
+        }
+
+    </style>
+
+</head>
+
+<body class="stretched">
+
+<!-- Document Wrapper
+============================================= -->
+<div id="wrapper" class="clearfix">
+
+    <!-- Header
+        ============================================= -->
+    <header id="header" class="full-header {{head}} dark" data-sticky-class="not-dark">
+
+        <div id="header-wrap">
+
+            <div class="container clearfix">
+
+                <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                <!-- Logo
+                ============================================= -->
+                <div id="logo">
+                    <a href="/index.html" class="standard-logo" data-dark-logo="/images/logoWhite.png"><img
+                            src="/images/logo.png" alt="Tradeschool Logo"></a>
+                    <a href="/index.html" class="retina-logo" data-dark-logo="/images/logoWhite.png"><img src="/images/logo.png"
+                                                                                                        alt="Tradeschool Logo"></a>
+                </div><!-- #logo end -->
+
+                <!-- Primary Navigation
+                ============================================= -->
+                <nav id="primary-menu">
+
+                    <ul>
+                        <li class="current"><a href="/">
+                            <div>Home</div>
+                        </a>
+                        </li>
+                        {{#if user}}
+                            <li><a href="/account">
+                                <div>My account</div>
+                                <ul>
+                                    <li><a href="#">
+                                        <div>Saved posts</div>
+                                    </a>
+                                    </li>
+                                </ul>
+                            </a>
+                            </li>
+                            <li class="current"><a href="/newlisting">
+                                <div>Create Listing</div>
+                            </a>
+                            </li>
+                            <li class="mega-menu"><a href="/users/logout">
+                                <div>logout</div>
+                            </a>
+                            </li>
+                        {{else}}
+                            <li class="mega-menu"><a href="/login">
+                                <div>Login</div>
+                            </a>
+                            </li>
+                        {{/if}}
+                    </ul>
+
+                    <!-- Top Messages
+                    ============================================= -->
+                    {{#if user}}
+                        <div id="top-cart">
+                            <a href="#" id="top-cart-trigger"><i class="icon-mail"></i><span>5</span></a>
+                        </div><!-- #top-Messages end -->
+                    {{/if}}
+
+                    <!-- Top Search
+                    ============================================= -->
+                    <div id="top-search">
+                        <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                        <form action="search.html" method="get">
+                            <input type="text" name="q" class="form-control" value=""
+                                   placeholder="Type &amp; Hit Enter.." ng-model="searchText">
+                        </form>
+                    </div><!-- #top-search end -->
+
+                </nav><!-- #primary-menu end -->
+
+            </div>
+
+        </div>
+
+    </header><!-- #header end -->
+
+    {{{body}}}
+    <!-- Footer
+    ============================================= -->
+    <footer id="footer" class="dark">
+
+        <div class="container">
+
+            <!-- Footer Widgets
+            ============================================= -->
+            <div class="footer-widgets-wrap clearfix">
+
+                <div class="col_two_third">
+
+                    <div class="col_one_third">
+
+                        <div class="widget clearfix">
+
+                            <img src="/images/logo.png" alt="" class="footer-logo">
+
+                            <div style="background: url('/images/world-map.png') no-repeat center center; background-size: 100%;">
+                                <address>
+                                    <strong>Made with love from:</strong><br>
+                                    The University of North Carolina <strong>Charlotte</strong><br>
+                                </address>
+                                <abbr title="Email Address"><strong>Email:</strong></abbr> admin@tradeschool.com
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col_one_third">
+
+                        <div class="widget widget_links clearfix">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col_one_third col_last">
+
+                    <div class="widget clearfix" style="margin-bottom: -20px;">
+
+                        <div class="row">
+
+                            <div class="col-md-6 bottommargin-sm">
+                                <div class="counter counter-small"><span data-from="50" data-to="15065421"
+                                                                         data-refresh-interval="80" data-speed="3000"
+                                                                         data-comma="true"></span></div>
+                                <h5 class="nobottommargin">Total Listings</h5>
+                            </div>
+
+                            <div class="col-md-6 bottommargin-sm">
+                                <div class="counter counter-small"><span data-from="100" data-to="18465"
+                                                                         data-refresh-interval="50" data-speed="2000"
+                                                                         data-comma="true"></span></div>
+                                <h5 class="nobottommargin">Total Users</h5>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div><!-- .footer-widgets-wrap end -->
+
+        </div>
+
+        <!-- Copyrights
+        ============================================= -->
+        <div id="copyrights">
+
+            <div class="container clearfix">
+
+                <div class="col_half">
+                    Copyrights &copy; 2016-2017 All Rights Reserved by TradeSchool<br>
+                    <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+                </div>
+
+            </div>
+
+        </div><!-- #copyrights end -->
+
+    </footer><!-- #footer end -->
+
+</div><!-- #wrapper end -->
+</body>
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+<!-- External JavaScripts
+============================================= -->
+<script
+        src="https://code.jquery.com/jquery-2.0.0.js"
+        integrity="sha256-iW43nTNM8LFseNmWKhV5FHFW1KcjVQMvzg3l9nPU4oc="
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/plugins.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Js for star rating-->
+<script type="text/javascript" src="/js/components/star-rating.js"></script>
+
+<!-- Footer Scripts
+============================================= -->
+<script type="text/javascript" src="/js/functions.js"></script>
+<!-- controller Scripts
+============================================= -->
+<script src="/js/controllers/main_controller.js"></script>
+
+<!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
+<script type="text/javascript" src="/include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+<script type="text/javascript" src="/include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+<script type="text/javascript" src="/include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+<script type="text/javascript" src="/include/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
+<script type="text/javascript"
+        src="/include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
+
+<script type="text/javascript">
+    var tpj = jQuery;
+    var revapi20;
+    tpj(document).ready(function () {
+        if (tpj("#rev_slider_20_1").revolution == undefined) {
+            revslider_showDoubleJqueryError("#rev_slider_20_1");
+        } else {
+            revapi20 = tpj("#rev_slider_20_1").show().revolution({
+                sliderType: "hero",
+                jsFileLocation: "/include/rs-plugin/js/",
+                sliderLayout: "fullwidth",
+                dottedOverlay: "none",
+                delay: 9000,
+                navigation: {},
+                responsiveLevels: [1240, 1024, 778, 480],
+                gridwidth: [1240, 1024, 778, 480],
+                gridheight: [600, 500, 400, 300],
+                lazyType: "none",
+                shadow: 0,
+                spinner: "off",
+                autoHeight: "off",
+                disableProgressBar: "on",
+                hideThumbsOnMobile: "off",
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                debugMode: false,
+                fallbacks: {
+                    simplifyAll: "off",
+                    disableFocusListener: false,
+                }
+            });
+        }
+    });
+    /*ready*/
+</script>
+
+<script src="/js/dirPagination.js"></script>
+

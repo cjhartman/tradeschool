@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Demo</title>
+    <!link rel="stylesheet" type="text/css" media="all" href="navstyle.css"-->
+    <link rel="stylesheet" type="text/css" media="all" href="./css/poststyle.css">
+    
+    
+    <!-- Stylesheets
+============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700,900|Roboto:100,300,400,500,700,900"
+          rel="stylesheet" type="text/css"/>
+    
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css"/>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <!--<link rel="stylesheet" href="css/style.css">-->
+    <link rel="stylesheet" href="css/dark.css" type="text/css"/>
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css"/>
+    <link rel="stylesheet" href="css/animate.css" type="text/css"/>
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css"/>
+    <link rel="stylesheet" href="css/responsive.css" type="text/css"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<header id="header" class="full-header dark" data-sticky-class="dark">
+
+    <div id="header-wrap">
+
+        <div class="container clearfix">
+
+            <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+            <!-- Logo
+            ============================================= -->
+            <div id="logo">
+                <a href="index.html" class="standard-logo" data-dark-logo="images/logoWhite.png"><img
+                        src="images/logoWhite.png" alt="Tradeschool Logo"></a>
+                <a href="index.html" class="retina-logo" data-dark-logo="images/logoWhite.png"><img
+                        src="images/logoWhite.png"
+                        alt="Tradschool Logo"></a>
+            </div><!-- #logo end -->
+
+            <!-- Primary Navigation
+            ============================================= -->
+            <nav id="primary-menu">
+
+                <ul>
+                    <li class="current"><a href="/">
+                        <div>Home</div>
+                    </a>
+                    </li>
+                    <li class="current"><a href="/newlisting">
+                        <div>Create Post</div>
+                    </a>
+                    </li>
+                    <li><a href="#">
+                        <div>My account</div>
+                        <ul>
+                            <li><a href="#">
+                                <div>Saved posts</div>
+                            </a>
+                            </li>
+                        </ul>
+                    </a>
+                    </li>
+                    <li class="mega-menu"><a href="login">
+                        <div>Login</div>
+                    </a>
+                    </li>
+                </ul>
+
+                <!-- Top Cart
+                ============================================= -->
+                <div id="top-cart">
+                    <a href="#" id="top-cart-trigger"><i class="icon-mail"></i><span>5</span></a>
+                    <div class="top-cart-content">
+                        <div class="top-cart-title">
+                            <h4>Shopping Cart</h4>
+                        </div>
+                        <div class="top-cart-items">
+                            <div class="top-cart-item clearfix">
+                                <div class="top-cart-item-image">
+                                    <a href="#"><img src="images/shop/small/1.jpg"
+                                                     alt="Blue Round-Neck Tshirt"/></a>
+                                </div>
+                                <div class="top-cart-item-desc">
+                                    <a href="#">Blue Round-Neck Tshirt</a>
+                                    <span class="top-cart-item-price">$19.99</span>
+                                    <span class="top-cart-item-quantity">x 2</span>
+                                </div>
+                            </div>
+                            <div class="top-cart-item clearfix">
+                                <div class="top-cart-item-image">
+                                    <a href="#"><img src="images/shop/small/6.jpg"
+                                                     alt="Light Blue Denim Dress"/></a>
+                                </div>
+                                <div class="top-cart-item-desc">
+                                    <a href="#">Light Blue Denim Dress</a>
+                                    <span class="top-cart-item-price">$24.99</span>
+                                    <span class="top-cart-item-quantity">x 3</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="top-cart-action clearfix">
+                            <span class="fleft top-checkout-price">$114.95</span>
+                            <button class="button button-3d button-small nomargin fright">View Cart</button>
+                        </div>
+                    </div>
+                </div><!-- #top-cart end -->
+
+                <!-- Top Search
+                ============================================= -->
+                <div id="top-search">
+                    <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                    <form action="search.html" method="get">
+                        <input type="text" name="q" class="form-control" value=""
+                               placeholder="Type &amp; Hit Enter.." ng-model="searchText">
+                    </form>
+                </div><!-- #top-search end -->
+
+            </nav><!-- #primary-menu end -->
+
+        </div>
+
+    </div>
+
+</header><!-- #header end -->
+<body>
+<div ng-app="App">
+        <div ng-controller="AppController">
+            <form ng-submit="submit()">
+            <div id="posting-container">
+                <div id="posting-info">
+                    <h1 id="posthead">Create Your Listing</h1>
+                    <br>
+                    <h2 class="post-desc">Title</h2>
+                    <input type="text" name="title" id="title-post" maxlength="35" ng-model="listing.title"/>
+                    <h2 class="post-desc">Description</h2>
+                    <textarea rows="10" columns="20" id="product-text-area" name="description"
+                              ng-model="listing.description"
+                              placeholder="Write a short summary of the item..."></textarea>
+                    <h2 class="post-desc">Condition</h2>
+                    <select name="dropdown-condition" id="cond-post" ng-mode="listing.condition">
+                        <option value="Choose"> Select One </option>
+                        <option value="Loved">Loved</option>
+                        <option value="Fair">Fair</option>
+                        <option value="Good">Good</option>
+                        <option value="Excellent">Excellent</option>
+                    </select>
+                    <h2 class="post-desc">Contact</h2>
+                    <input type="text" name="title" id="contact-post" ng-model="listing.contact"/>
+                    <h2 class="post-desc">Price</h2>
+                    <input type="text" name="price" id="price-post" maxlength="15" ng-model="listing.price"/>
+                    <h2 class="post-desc">Tags</h2>
+                    <select name="dropdown-tag" id="tag-post" ng-model="listing.tags">
+                        <option value="Appliances">Appliances</option>
+                        <option value="Books">Books</option>
+                        <option value="Clothing/Accessories">Clothing/Appliances</option>
+                        <option value="Electronics">Electronics</option>
+                        <option value="Free">Free</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Household">Household</option>
+                        <option value="Other">Other</option>
+                        <option value="Rooms/Sublets">Rooms/Sublets</option>
+                        <option value="Services">Services</option>
+                    </select>
+                </div>
+                <div id="post-img">
+                <input type="file" id="file"  class="inputfile" name="file"
+                onchange="angular.element(this).scope().photoChanged(this.files)" multiple="false"/>
+                <img ng-show="thumbnail.dataUrl != null" ng-src="{{ thumbnail.dataUrl }}" class="thumb">
+                <label class="label-file" for="file">Choose A File</label>
+                <br><br></div>
+                <button id="post-button">Post</button>
+                </div>
+                <div id="seller" ng-model="listing-seller" style="visibility: hidden;">nobody</div>
+                </form>
+                <droplet ng-model="uploadFiles"></droplet>
+                <input type="button" value="Upload Files" ng-click="uploadFiles()"/>
+                </div>
+</div>
+    <hr>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+<script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+
+<script>
+    angular.module('App', [])
+    angular.module('App')
+        .controller('AppController', function($scope, $http, $timeout){
+            $scope.product = {};
+            $scope.submit = function () {
+                var formData = new FormData;
+                for (key in $scope.listing) {
+                    formData.append(key, $scope.product[key]);
+                    console.log(key, "........");
+                    console.log($scope.product[key]);
+                }
+                var file = $('#file')[0].files[0];
+                formData.append('image', file);
+                formData.append('seller', 'default seller');
+                console.log(file, "file....");
+                $http.post('http://localhost:3000/newListing', formData, {
+                    transformRequest: angular.identity,
+                    headers: {
+                        'Content-Type': undefined
+                    }
+                }).then(function (res) {
+
+                });
+            };
+             $scope.thumbnail = {
+                    dataUrl: ''
+                };
+                $scope.fileReaderSupported = window.FileReader != null;
+                $scope.photoChanged = function(files){
+                    if (files != null) {
+                        var file = files[0];
+                    if ($scope.fileReaderSupported && file.type.indexOf('image') > -1) {
+                        $timeout(function() {
+                            var fileReader = new FileReader();
+                            fileReader.readAsDataURL(file);
+                            fileReader.onload = function(e) {
+                                $timeout(function(){
+             $scope.thumbnail.dataUrl = e.target.result;
+                                });
+                            }
+                        });
+                    }
+                }
+                };
+            $scope.uploadFiles= function(){
+                console.log("in droplet");
+                $scope.$on('$dropletReady', function whenDropletReady() {
+                    console.log("in droplet readey")
+                $scope.interface.allowedExtensions(['png', 'jpg', 'bmp', 'gif']);
+            });
+        };
+                
+        });
+
+    </script>
+    
+    </body>
+</html>
